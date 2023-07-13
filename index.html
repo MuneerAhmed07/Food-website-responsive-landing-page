@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food delivery web App</title>
+
+    <!-- box icon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header">
+        <p>We're open and available for takeaway & delivery.</p>
+        <a href="#">Order Now</a>
+    </header>
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <img class="logo" src="./images/logo.png" alt="logo-image">
+        <ul class="nav-list" id="list-item">
+            <li class="nav-link"><a href="#" class="active">Home</a></li>
+            <li class="nav-link"><a href="#">Order</a></li>
+            <li class="nav-link"><a href="#">Company</a></li>
+            <li class="nav-link"><a href="#">FAQ</a></li>
+            <li class="nav-link"><a href="#">Contact</a></li>
+            <button class="nav-btn cart list-btn btn" onclick="cart()"><i class='bx bxs-cart-alt'></i></button>
+        </ul>
+        <div class="nav-btn-section">
+            <button class="nav-btn cart btn" onclick="cart()"><i class='bx bxs-cart-alt'></i></button>
+            <button class="nav-btn hum-burgur-menu btn" id="menu"><i class='bx bx-menu'></i></button>
+        </div>
+
+        <!-- nav Cart section -->
+        <div class="nav-order-now">
+            <div class="head-section">
+                <h2>Your Order</h2>
+                <i class='bx bx-window-close close'></i>
+            </div>
+            <div class="nav-product-section">
+
+                <div class="nav-box">
+                    <div class="img-box">
+                        <img src="./images/product.png" alt="burgur">
+                        <div class="content">
+                            <h4>Burger Dreams</h4>
+                            <p>$ 9.20 USD</p>
+                            <a href="#" class="order-now-remove">Remove</a>
+                        </div>
+                    </div>
+                    <input class="input" type="number">
+                </div>
+
+            </div>
+            <div class="total-section">
+                <div class="title">
+                    <h4>Subtotal:</h4>
+                    <h3>$9.20 USD</h3>
+                </div>
+                <button class="nav-order-button btn">Continue to Checkout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home container -->
+    <section class="home home-container">
+        <div class="home-left-col">
+            <div class="home-text">
+                <h1>Beautiful food & takeaway, <span class="home-span">delivered</span> to your door.</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
+                <a href="#" class="btn">Place an Order</a>
+            </div>
+            <h4>Trustpilot</h4>
+            <p><span class="trust">4.8 out of 5</span>based on 2000+ reviews</p>
+        </div>
+        <div class="home-right-col">
+            <img src="./images/home-img.png" alt="home-image">
+        </div>
+    </section>
+
+    <!-- custom Script file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --main-bg-color: #35b8be;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: #546285;
+    font-size: 18px;
+}
+
+.btn {
+    background-color: var(--main-bg-color);
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ------ header section ------ */
+
+.header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+    color: #fff;
+}
+
+.header p {
+    font-size: 15px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.header a {
+    color: #fff;
+}
+
+/* -------- navbar ------- */
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #fff;
+    padding: 2% 5%;
+}
+
+.navbar .logo {
+    width: 60px;
+}
+
+.navbar .nav-link{
+    display: inline-block;
+    list-style: none;
+}
+
+.navbar .nav-link a {
+    padding: 5px;
+    font-size: 16px;
+    color: #646464;
+    margin: 0 10px;
+    transition: .3s linear;
+}
+
+.navbar .nav-link a:hover {
+    color: #000;
+}
+
+.navbar .nav-link a.active {
+    color: var(--main-bg-color);
+}
+
+.nav-btn {
+    padding: 15px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.nav-btn i {
+    font-size: 25px;
+    color: #fff;
+}
+
+.cart::before {
+    content: '0';
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #fff;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    border-radius: 50%;
+    box-shadow: 7px 7px 25px 0 rgba(126, 130, 143, 0.27);
+    color: var(--main-bg-color);
+}
+
+.nav-btn-section {
+    display: none;
+}
+
+.nav-btn-section .hum-burgur-menu {
+    margin-left: 15px;
+    background: #7e828f1a;
+}
+
+.nav-btn-section .hum-burgur-menu i {
+    color: #000;
+}
+
+/* ------- nav Cart section ------- */
+
+.nav-order-now {
+    position: fixed;
+    background-color: #ffff;
+    right: -500px;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
+    transition: .5s ease-in;
+}
+
+.nav-order-now .head-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+.head-section,
+.nav-product-section {
+    border-bottom: 1px solid #ccc;
+    padding: 0px 30px;
+}
+
+.head-section h2 {
+    font-size: 28px;
+}
+
+.head-section i {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--main-bg-color);
+}
+
+.nav-product-section {
+    height: calc(100% - 210px);
+    overflow-y: auto;
+}
+
+.nav-box {
+    margin-bottom: 10px;
+}
+
+.nav-box, .img-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-box img {
+    margin-right: 15px;
+    width: 60px;
+}
+
+.img-box p, .img-box .order-now-remove {
+    font-size: 14px;
+}
+
+.img-box .order-now-remove {
+    color: #fc6732;
+}
+
+.nav-box .input {
+    width: 50px;
+    height: 40px;
+    padding: 10px 5px 10px 10px;
+}
+
+.nav-box .input:focus {
+    outline-color: #35b8be;
+}
+
+.total-section {
+    height: 120px;
+    padding: 15px 30px;
+}
+.total-section .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-section .nav-order-button {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 12px 32px;
+}
+
+.nav-order-now.order-active {
+    right: 0;
+}
+
+
+/* ---------- Home Section -------------- */
+
+.home {
+    background-image: url('/images/home-bg.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.home .home-left-col {
+    width: 50%;
+    padding-right: 40px;
+}
+
+.home .home-left-col .home-text {
+    margin-bottom: 40px;
+}
+
+.home .home-left-col h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.home .home-left-col h1 .home-span {
+    color: var(--main-bg-color);
+}
+
+.home .home-left-col .home-text p {
+    margin-bottom: 50px;
+}
+
+.home .home-left-col .home-text .btn {
+    padding: 14px 28px;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+.home .home-left-col .home-text .btn:hover {
+    background-color: #4ba4a8;
+}
+
+.home .home-left-col h4 {
+    margin-bottom: 10px;
+}
+
+.home .home-left-col p .trust {
+    color: var(--main-bg-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------- media query -------------------------------- */
+
+@media (max-width: 890px) {
+    .home {
+        flex-wrap: wrap;
+    }
+    .home .home-left-col {
+        width: 100%;
+        text-align: center;
+        padding: 80px 40px;
+    }
+    
+}
+
+
+@media (max-width: 760px) {
+
+    /* For navbar link */
+    .navbar .nav-list{
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: #fff;
+        top: -300px;
+        left: 0;
+        box-shadow: 7px 7px 25px 0 rgba(126, 130, 143, 0.27);
+        transition: .5s ease;
+        z-index: 1;
+    }
+
+    .navbar .nav-link {
+        display: block;
+        padding: 8px 15px;
+        margin: 20px 15px;
+    }
+
+    .navbar .list-btn {
+        display: none;
+    }
+
+    .nav-btn-section {
+        display: block;
+    }
+
+    .nav-list.nav-active {
+        top: 150px;
+    }
+
+    /* Home section */
+    .home .home-left-col h1 {
+        font-size: 3rem;
+    }
+
+    .home .home-right-col img {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    /* header section */
+    .header {
+        display: none;
+    }
+
+    .nav-list.nav-active {
+        top: 100px;
+    }
+
+    /* NavOrder section */
+    .nav-order-now {
+        width: 330px;
+    }
+
+    /* Home section */
+    .home .home-left-col h1 {
+        font-size: 2rem;
+    }
+
+    .home .home-left-col p {
+        font-size: 14px;
+    }
+}
